@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+
+import NavBar from "./navBar";
+import "./App.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className= "App">
+      <NavBar/>
+      <div className="container">
+      <h1>Dobrodosli u nas Zoo vrt!</h1>
+      <p>Nas cilj je da ocuvamo divljinu i inspirisemo i druge da ocuvanje postane njihov prioritet!</p>
+      </div>
+    
     </div>
+    
   );
 }
 
