@@ -1,25 +1,26 @@
 import React from "react";
 import "./navBar.css";
 import { MenuOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 function navBar() {
   return (
     <>
       <input type="checkbox" id="active" />
-      <label for="active" className="menu-btn">
+      <label htmlFor="active" className="menu-btn">
         {/* <i className="fas fa-bars"></i> */}
         <MenuOutlined />
       </label>
       <div className="navBar">
-        <ul className>
+        <ul>
           <li>
-            <a href="/">Pocetna strana</a>
+            <Link to="/">Pocetna strana</Link>
           </li>
           <li>
-            <a href="/tickets">Karte</a>
+            <Link to="/tickets">Karte</Link>
           </li>
           <li>
-            <a href="/animals">Nase zivotinje</a>
+            <Link to="./animals">Nase zivotinje</Link>
           </li>
         </ul>
       </div>
