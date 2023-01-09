@@ -2,7 +2,7 @@ import React from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import { MinusOutlined } from "@ant-design/icons";
 
-const OneTicket = ({ ticket, onAdd, onRemove }) => {
+const CartProduct = ({ ticket, onAdd, onRemove }) => {
   return (
     <div className="card">
       <img
@@ -15,15 +15,10 @@ const OneTicket = ({ ticket, onAdd, onRemove }) => {
         <h3 className="card-title">{ticket.title}</h3>
         <p className="card-text">{ticket.description}</p>
         <p className="card-price">Cena: {ticket.price}</p>
-        <button className="btn" onClick={() => onAdd(ticket.id)}>
-          <PlusOutlined />
-        </button>
-        <button className="btn" onClick={() => onRemove(ticket.id)}>
-          <MinusOutlined />
-        </button>
+        <h3>Kolicina: {ticket.amount}</h3>
       </div>
     </div>
   );
 };
 
-export default OneTicket;
+export default CartProduct;

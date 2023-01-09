@@ -1,17 +1,29 @@
 import React from "react";
 import OneTicket from "./oneTicket";
-import NavBar from "./navBar";
+import { ShoppingCartOutlined } from "@ant-design/icons";
 import "./tickets.css";
+import { Link } from "react-router-dom";
 
-const Tickets = ({ tickets }) => {
+const Tickets = ({ tickets, onAdd, onRemove, cartNum }) => {
   return (
-    <div className="all-tickets">
-      <NavBar />
-      <OneTicket ticket={tickets[0]} />
-      <OneTicket ticket={tickets[1]} />
-      <OneTicket ticket={tickets[2]} />
-      <OneTicket ticket={tickets[3]} />
-    </div>
+    <>
+      <button className="btn" style={{ marginTop: 20, marginLeft: 20 }}>
+        <Link to="../cart">
+          <ShoppingCartOutlined />
+        </Link>
+      </button>
+      <div className="cartNumber">{cartNum}</div>
+      <div className="all-tickets">
+        {tickets.map((ticket) => (
+          <OneTicket
+            key={ticket.id}
+            ticket={ticket}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

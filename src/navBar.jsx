@@ -22,6 +22,9 @@ function navBar() {
           <li>
             <Link to="./animals">Nase zivotinje</Link>
           </li>
+          <li>
+            <Link to="./cart">Korpa</Link>
+          </li>
         </ul>
       </div>
     </>
