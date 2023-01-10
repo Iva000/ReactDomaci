@@ -1,0 +1,37 @@
+body {
+	background-color: aliceblue;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  }
+
+  .all-tickets {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 200px;
+    text-align: center;
+  }
+  
+  .card {
+    background-color: aliceblue;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(211, 211, 211);
+    border-radius: 10px;
+    max-width: 700px;
+    margin-right: 50px;
+    margin-left: 320px;
+    margin-bottom: 50px;
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+  }
+  
+  .card-body {
+    margin: 10px;
+  }

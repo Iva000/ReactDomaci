@@ -20,7 +20,7 @@ function navBar() {
             <Link to="/tickets">Karte</Link>
           </li>
           <li>
-            <Link to="./animals">Nase zivotinje</Link>
+            <Link to="./Search">Nase zivotinje</Link>
           </li>
           <li>
             <Link to="./cart">Korpa</Link>
