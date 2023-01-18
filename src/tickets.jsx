@@ -7,12 +7,16 @@ import { Link } from "react-router-dom";
 const Tickets = ({ tickets, onAdd, onRemove, cartNum }) => {
   return (
     <>
-      <button className="btn" style={{ marginTop: 20, marginLeft: 20 }}>
-        <Link to="../cart">
-          <ShoppingCartOutlined />
-        </Link>
-      </button>
-      <div className="cartNumber">{cartNum}</div>
+      <div className="header">
+        <button className="btn" style={{ marginTop: 20, marginLeft: 20 }}>
+          <Link to="../cart">
+            <ShoppingCartOutlined />
+          </Link>
+        </button>
+        <div className="cartNumber">{cartNum}</div>
+      </div>
+      <h1>Kupite Vaše karte ovde!</h1>
+
       <div className="all-tickets">
         {tickets.map((ticket) => (
           <OneTicket

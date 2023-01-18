@@ -15,12 +15,15 @@ const OneTicket = ({ ticket, onAdd, onRemove }) => {
         <h3 className="card-title">{ticket.title}</h3>
         <p className="card-text">{ticket.description}</p>
         <p className="card-price">Cena: {ticket.price}</p>
-        <button className="btn" onClick={() => onAdd(ticket.id)}>
-          <PlusOutlined />
-        </button>
-        <button className="btn" onClick={() => onRemove(ticket.id)}>
-          <MinusOutlined />
-        </button>
+        <div className="footer">
+          <button className="btn" onClick={() => onAdd(ticket.id)}>
+            <PlusOutlined />
+          </button>
+          <p>{ticket.amount}</p>
+          <button className="btn" onClick={() => onRemove(ticket.id)}>
+            <MinusOutlined />
+          </button>
+        </div>
       </div>
     </div>
   );

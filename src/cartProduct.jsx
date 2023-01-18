@@ -1,10 +1,8 @@
 import React from "react";
-import { PlusOutlined } from "@ant-design/icons";
-import { MinusOutlined } from "@ant-design/icons";
 
-const CartProduct = ({ ticket, onAdd, onRemove }) => {
+const CartProduct = ({ ticket }) => {
   return (
-    <div className="card">
+    <div className="card-cart">
       <img
         className="card-image-top"
         src={ticket.img}

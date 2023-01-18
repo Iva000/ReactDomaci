@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navBar.css";
 import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-function navBar() {
+function NavBar() {
+  const [setIsOpen] = useState(true);
+  const toggle = () => setIsOpen(false);
   return (
     <>
       <input type="checkbox" id="active" />
       <label htmlFor="active" className="menu-btn">
-        {/* <i className="fas fa-bars"></i> */}
         <MenuOutlined />
       </label>
       <div className="navBar">
         <ul>
           <li>
-            <Link to="/">Pocetna strana</Link>
+            <Link to="/" onClick={toggle}>
+              Početna strana
+            </Link>
           </li>
           <li>
-            <Link to="/tickets">Karte</Link>
+            <Link to="/tickets" onClick={toggle}>
+              Karte
+            </Link>
           </li>
           <li>
-            <Link to="./Search">Nase zivotinje</Link>
+            <Link to="./Search" onClick={toggle}>
+              Naše životinje
+            </Link>
           </li>
           <li>
-            <Link to="./cart">Korpa</Link>
+            <Link to="./cart" onClick={toggle}>
+              Korpa
+            </Link>
           </li>
         </ul>
       </div>
@@ -31,4 +40,4 @@ function navBar() {
   );
 }
 
-export default navBar;
+export default NavBar;

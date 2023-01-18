@@ -18,15 +18,17 @@ function Search({ details }) {
 
   return (
     <section className="garamond">
-      <h1>Zivotinje koje mozete pronaci u nasem zooloskom vrtu!</h1>
+      <h1>Životinje koje možete pronaći u našem zoološkom vrtu!</h1>
       <div className="navy georgia ma0 grow">
-        <h3 className="f2">Pretrazi zivotinje</h3>
+        <h3 className="f2" style={{ marginLeft: 10 }}>
+          Pretraži životinje
+        </h3>
       </div>
-      <div className="pa2">
+      <div className="pa2" style={{ marginLeft: 10 }}>
         <input
           className="pa3"
           type="search"
-          placeholder="Pretrazi zivotinje"
+          placeholder="Pretraži životinje"
           onChange={handleChange}
         />
       </div>

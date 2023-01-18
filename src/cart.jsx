@@ -1,14 +1,29 @@
 import React from "react";
-import CartProduct from "./cartProduct";
+import OneTicket from "./oneTicket";
+import "./cart.css";
 
-const Cart = ({ cartProducts }) => {
+const Cart = ({ cartProducts, onAdd, onRemove }) => {
+  const initPrice = 0;
+  const total = cartProducts.reduce(
+    (accumulator, current) => accumulator + current.price * current.amount,
+    initPrice
+  );
+
   return (
     <div className="cart-container">
-      <h1>Ovo je vasa korpa</h1>
-      {cartProducts.map((ticket) => (
-        <CartProduct key={ticket.id} ticket={ticket} />
-      ))}
-      Korpa je prazna.
+      <h1>Ovo je vaša korpa</h1>
+      <div className="cart-all">
+        {cartProducts.map((ticket) => (
+          <OneTicket
+            key={ticket.id}
+            ticket={ticket}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          />
+        ))}
+      </div>
+
+      <h3>Ukupno: {total} RSD</h3>
     </div>
   );
 };

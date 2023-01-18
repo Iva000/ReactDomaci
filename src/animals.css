@@ -4,17 +4,15 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
   }
-
-  .all-tickets {
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 200px;
-    text-align: center;
-  }
   
-  .card {
+.card-title{
+  text-align: center;
+  font-size: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+  
+  .animal-card {
     background-color: aliceblue;
     border-style: solid;
     border-width: 2px;
